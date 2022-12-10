@@ -1,0 +1,6 @@
+  - name: Installing Cinder and its prerequisites
+    apt:
+      name:
+        - lvm2
+        - thin-provisioning-tools
+        - cinder-volume

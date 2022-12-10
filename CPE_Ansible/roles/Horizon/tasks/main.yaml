@@ -1,0 +1,6 @@
+  - name: Installing Horizon
+    apt:
+      name:
+        - openstack-dashboard
+
+

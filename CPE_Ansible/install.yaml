@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: Install Updates on Remote Server
+    apt:
+      upgrade: dist
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: remote_server
+  become: true
+  roles:
+    - Cinder
+    - Horizon
+    - Neutron
